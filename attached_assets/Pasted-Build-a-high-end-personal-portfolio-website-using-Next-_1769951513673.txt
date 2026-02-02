@@ -1,0 +1,197 @@
+Build a high-end personal portfolio website using **Next.js (App Router)** and **TypeScript**. The site should represent an elite, experienced full-stack engineer and feel like a futuristic military command interface.
+
+**IMPORTANT**: This portfolio site does NOT require any backend functionality. It will be a **static site** with no need for form handling, user authentication, or database interactions. Content will be statically generated (SSG).
+
+The result must be visually striking, technically clean, fully responsive, and production-quality.
+
+────────────────────────────
+1. TECH STACK (MANDATORY)
+────────────────────────────
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: CSS Modules or global CSS (no inline styles)
+- Animations: requestAnimationFrame / CSS animations
+- 3D: Three.js (allowed and encouraged)
+- No deprecated APIs
+- Static Site Generation (SSG) only — **NO backend required**.
+
+────────────────────────────
+2. PROJECT STRUCTURE
+────────────────────────────
+Organize the project as follows:
+
+- app/
+  - layout.tsx
+  - page.tsx
+  - globals.css
+- components/
+  - Navbar.tsx
+  - MobileMenu.tsx
+  - Hero.tsx
+  - Globe.tsx
+  - RadarCursor.tsx
+  - Preloader.tsx
+  - BinaryBackground.tsx
+- styles/
+- public/
+  - images/
+  - icons/
+- lib/
+  - animations.ts
+  - constants.ts
+
+Code must be modular, typed, well-commented, and scalable.
+
+────────────────────────────
+3. COLOR SYSTEM (CRITICAL)
+────────────────────────────
+Primary accent color MUST reference:
+
+- Primary Blue: oklch(0.715 0.143 215.221)
+
+Supporting colors:
+- Background: #0B0C10
+- Secondary panels: #12161D
+- Primary text: #C5C6C7
+- Muted text: #8A8F98
+- Tactical green accent: #4CAF50
+
+Use OKLCH where supported, with safe fallbacks for older browsers.
+
+────────────────────────────
+4. RESPONSIVENESS (VERY IMPORTANT)
+────────────────────────────
+The site MUST be fully responsive.
+
+### Navigation behavior:
+- Desktop: horizontal navigation bar
+- Mobile & tablet:
+  - Replace nav with a **hamburger button**
+  - Clicking opens a **dropdown / slide-down tactical menu**
+  - Smooth, controlled animation
+  - Large tap targets
+  - Auto-close on navigation
+
+### Layout rules:
+- Globe must NEVER be clipped or cut off
+- No text may overlap the globe at any breakpoint
+- Globe scales and repositions responsively
+- Sections stack cleanly on small screens
+
+────────────────────────────
+5. HERO SECTION — RADIO TYPING EFFECT
+────────────────────────────
+Hero text must appear using a **radio transmission / typist effect**:
+
+- Characters appear one-by-one
+- Slight flicker and jitter (signal decoding feel)
+- Controlled timing, not glitch chaos
+- Implement as a reusable hook or utility
+- Used for hero title, subtitle, and key headings
+
+NO input fields — this is a display animation only.
+
+────────────────────────────
+6. 3D EARTH-LIKE DOT GLOBE (CORE FEATURE)
+────────────────────────────
+Implement a rotating 3D globe using Three.js.
+
+### Globe requirements:
+- Constructed from particles/dots
+- NOT a perfect sphere
+- Dot density must resemble **Earth’s continents**
+  - Higher density in continental regions
+  - Lower density in oceans
+- Subtle depth shading and brightness variation
+
+### Rings & satellites:
+- Multiple orbital rings (NOT one)
+- Each ring:
+  - Different radius
+  - Different rotation speed
+  - Subtle blue glow
+- Optional small satellite dots orbiting independently
+
+### Rendering & layout safety:
+- Globe container must prevent clipping
+- Ensure safe margins in all viewports
+- Responsive scaling logic required
+
+────────────────────────────
+7. ADVANCED RADAR RETICLE (CURSOR SYSTEM)
+────────────────────────────
+Replace the default cursor with an advanced **radar targeting reticle**:
+
+- Multi-layer reticle:
+  - Outer rotating ring
+  - Inner crosshair
+  - Pulsing scan lines
+- Smooth interpolation with slight tracking delay
+- Reticle reacts to interactive elements:
+  - Lock-on animation
+  - Glow intensity increases on hover
+- Looks like a real military tracking HUD
+
+Disable or simplify on mobile devices.
+
+────────────────────────────
+8. BINARY DATA BACKGROUND
+────────────────────────────
+Animated binary data should run in the background:
+
+- Aggressive movement patterns
+- Vertical + horizontal scans
+- Random bursts and flickers
+- Low opacity to avoid overpowering content
+- Looks like live encrypted military telemetry
+
+────────────────────────────
+9. PRELOADER
+────────────────────────────
+Include a preloader:
+
+- Radar-style circular animation
+- Uses primary blue
+- Feels like a system boot sequence
+- Smooth fade-out into hero section
+
+────────────────────────────
+10. UI INTERACTIONS
+────────────────────────────
+All UI interactions must feel premium:
+
+- Links:
+  - Smooth transitions
+  - Subtle depth or lateral movement
+  - Blue glow accent on hover
+- Buttons:
+  - Tactical, minimal
+  - Slight press feedback
+- No flashy or cartoonish effects
+
+────────────────────────────
+11. SITE SECTIONS
+────────────────────────────
+Include placeholder content for:
+
+- Hero (globe + radio typing)
+- Skills
+- Projects (3–5 cards)
+- Experience
+- Contact
+
+────────────────────────────
+12. QUALITY BAR
+────────────────────────────
+- Strong typing throughout (no `any`)
+- Performance-aware animations
+- Clean separation of concerns
+- Production-quality architecture
+
+The final site should feel like a secure military command console built by a top-tier engineer.
+
+────────────────────────────
+13. DEPLOYMENT
+────────────────────────────
+- Ensure the site is optimized for **static deployment**.
+- It should work seamlessly when deployed to **Vercel**, **Netlify**, or **GitHub Pages**.

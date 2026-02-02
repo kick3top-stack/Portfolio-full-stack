@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Tactical Sci-Fi Palette */
+  --background: 220 16% 5%; /* #0B0C10 */
+  --foreground: 210 20% 90%;
+  
+  --primary: 215 75% 71%; /* Cyan-Blue oklch(0.715 0.143 215.221) approx HSL */
+  --primary-foreground: 220 16% 5%;
+  
+  --secondary: 180 5% 15%;
+  --secondary-foreground: 210 20% 90%;
+  
+  --accent: 122 39% 49%; /* Tactical Green #4CAF50 */
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 60% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --muted: 215 15% 15%;
+  --muted-foreground: 215 10% 60%;
+  
+  --card: 220 16% 8%;
+  --card-foreground: 210 20% 90%;
+  
+  --popover: 220 16% 5%;
+  --popover-foreground: 210 20% 90%;
+  
+  --border: 215 20% 20%;
+  --input: 215 20% 20%;
+  --ring: 215 75% 71%;
+  
+  --radius: 2px; /* Sharp corners for military feel */
+
+  /* Custom Fonts */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: var(--font-body);
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.03) 0%, transparent 50%),
+      linear-gradient(rgba(11, 12, 16, 0.9), rgba(11, 12, 16, 0.9));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply uppercase tracking-widest;
+  }
+  
+  code, pre, .mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .tactical-border {
+    @apply border border-primary/20 relative;
+  }
+  
+  .tactical-border::before {
+    content: '';
+    @apply absolute -top-[1px] -left-[1px] w-2 h-2 border-t-2 border-l-2 border-primary;
+  }
+
+  .tactical-border::after {
+    content: '';
+    @apply absolute -bottom-[1px] -right-[1px] w-2 h-2 border-b-2 border-r-2 border-primary;
+  }
+
+  .scanline {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.5) 50%
+    );
+    background-size: 100% 4px;
+    animation: scanline 10s linear infinite;
+    @apply pointer-events-none fixed inset-0 z-50 opacity-10;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px rgba(var(--primary), 0.5);
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-none;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
