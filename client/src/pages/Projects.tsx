@@ -24,7 +24,6 @@ export default function Projects() {
           {MOCK_PROJECTS.map((project, idx) => (
             <TacticalCard key={project.id} delay={idx * 0.2} className="group overflow-hidden p-0">
                <div className="flex flex-col md:flex-row h-full">
-                 {/* Image Section */}
                  <div className="w-full md:w-2/5 relative h-64 md:h-auto overflow-hidden border-b md:border-b-0 md:border-r border-primary/20">
                     <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
                     <img 
@@ -32,11 +31,9 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" 
                     />
-                    {/* Overlay Grid */}
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoNTYsIDE4OSwgMjQ4LCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik0wIDBoMjB2MjBIMHoiLz48L3N2Zz4=')] opacity-50 z-20 pointer-events-none" />
                  </div>
 
-                 {/* Content Section */}
                  <div className="w-full md:w-3/5 p-8 flex flex-col justify-between relative bg-card/40">
                     <div className="absolute top-4 right-4 text-xs font-mono text-primary/30">
                        ID: #{project.id.toString().padStart(3, '0')}
@@ -61,12 +58,14 @@ export default function Projects() {
                       </div>
 
                       <div className="flex gap-4">
-                        <button className="flex items-center gap-2 px-4 py-2 bg-primary text-background font-bold text-sm hover:bg-white transition-colors">
-                           <ExternalLink size={14} /> DEPLOY
-                        </button>
-                        <button className="flex items-center gap-2 px-4 py-2 border border-primary/30 text-primary text-sm hover:bg-primary/10 transition-colors">
-                           <Github size={14} /> SOURCE
-                        </button>
+                        <a 
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-primary text-background font-bold text-sm hover:bg-white transition-colors"
+                        >
+                           <ExternalLink size={14} /> CHECK IT
+                        </a>
                       </div>
                     </div>
                  </div>
