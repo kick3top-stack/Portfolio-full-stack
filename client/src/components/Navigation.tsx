@@ -16,10 +16,10 @@ export function Navigation() {
           <Link href="/">
             <div className="flex flex-col cursor-pointer group">
               <span className="font-display font-bold text-2xl tracking-widest text-primary group-hover:text-white transition-colors">
-                CMD_PORTFOLIO
+                DELTA_FORCE
               </span>
               <span className="text-[10px] text-primary/50 font-mono tracking-[0.3em]">
-                {"SYS.VER.2.0.4" + "(Delta Force)"}
+                {"SYS.VER.2.0.4"}
               </span>
             </div>
           </Link>

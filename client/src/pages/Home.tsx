@@ -21,7 +21,7 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="font-mono text-primary/50 text-sm tracking-widest mb-4"
         >
-          // FULL_STACK_ENGINEER • REACT • NODE • TYPESCRIPT
+          // FULL_STACK_ENGINEER • NEXT • NODE • TYPESCRIPT
         </motion.div>
 
         <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-none tracking-tight">

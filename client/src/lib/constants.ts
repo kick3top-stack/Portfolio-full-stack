@@ -1,5 +1,9 @@
 import { Project, Skill } from "@shared/schema";
 import image1 from "@/images/item1.png"
+import image2 from "@/images/item2.png"
+import image3 from "@/images/item3.png"
+import image4 from "@/images/item4.png"
+
 
 export const MOCK_PROJECTS: Project[] = [
   {
@@ -8,32 +12,37 @@ export const MOCK_PROJECTS: Project[] = [
     description:
       "Built responsive, user-friendly dashboards and real-time video call interfaces. Integrated video players (WebRTC, YouTube, Plyr) and connected front-end with back-end APIs for secure authentication and live updates. Optimized UI performance, loading speed, and mobile responsiveness. Collaborated with lead full-stack developer to deliver a fast, interactive, and reliable customer video platform.",
     techStack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Plyr/YouTube API", "WebSockets", "REST APIs", "Auth0", "core-js", "Cloudflare", "Webpack"],
-    link: "#",
+    link: "https://videsk.io",
     imageUrl: image1,
   },
   {
     id: 2,
-    title: "CLIENT_OPERATIONS_PLATFORM",
+    title: "Adswize Marketing Platform Website",
     description:
-      "A secure internal web application for managing clients, invoices, workflows, and permissions at scale.",
-    techStack: ["Next.js", "Tailwind", "Prisma", "PostgreSQL", "Docker"],
-    link: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=800",
+      "Implemented marketing and product pages, integrated analytics and third-party services, handled form submissions and API calls, and supported deployment workflows. Integrated analytics and tracking in a clean, maintainable way, enabling the business team to measure conversions without impacting site performance.",
+    techStack: ["React", "Next.js", "JavaScript", "Node.js", "REST APIs", "Analytics tools", "Git"],
+    link: "https://adswize.io/",
+    imageUrl: image2,
   },
   {
     id: 3,
-    title: "SAAS_AUTHENTICATION_SYSTEM",
+    title: "BrowserBound Agency Website",
     description:
-      "Authentication and authorization system with JWT, role-based access control, and audit logging for SaaS products.",
-    techStack: ["Node.js", "TypeScript", "Redis", "PostgreSQL", "AWS"],
-    link: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+      "Built responsive UI components, integrated dynamic content, implemented SEO-friendly pages, and handled basic back-end interactions and site maintenance. Carefully translated design mockups into reusable components while maintaining consistent spacing, typography, and mobile responsiveness across pages.",
+    techStack: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Node.js", "Git"],
+    link: "https://browserbound.com/",
+    imageUrl: image3,
+  },
+  {
+    id: 4,
+    title: "Multihub Marketing Website",
+    description:
+      "Built responsive UI components, integrated CMS-managed content, and handled analytics and tracking integrations. Implemented reusable components that simplified content updates without developer involvement.",
+    techStack: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Node.js", "Git"],
+    link: "https://www.multihub.io/",
+    imageUrl: image4,
   },
 ];
-
-
 export const MOCK_SKILLS: Skill[] = [
   // INTERFACE SYSTEMS
   {
@@ -103,4 +112,3 @@ export const NAV_ITEMS = [
   { label: "WORK", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];
-
