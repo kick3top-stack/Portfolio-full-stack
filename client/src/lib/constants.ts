@@ -107,8 +107,8 @@ export const MOCK_SKILLS: Skill[] = [
 
 
 export const NAV_ITEMS = [
-  { label: "STATUS", href: "/" },
-  { label: "CAPABILITIES", href: "/skills" },
+  { label: "OVERVIEW", href: "/" },
+  { label: "SKILLS", href: "/skills" },
   { label: "WORK", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];
